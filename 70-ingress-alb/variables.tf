@@ -9,18 +9,16 @@ variable "environment" {
 variable "common_tags" {
     default = {
         Project = "roboshop"
-        Terraform = "true"
         Environment = "dev"
-    }
-}
-
-variable "ingress_alb_tags" {
-    default = {
-        Component = "web-alb"
+        Terraform = "true"
     }
 }
 
 
-variable "zone_name" {
-    default = "daws81s.online"
+variable "zone_id" {
+    default = "Z021448929NMXW4P65UQE"
+}
+
+variable "domain_name" {
+    default = "daws82s.online"
 }

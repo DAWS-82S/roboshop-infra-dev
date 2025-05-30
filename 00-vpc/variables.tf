@@ -2,7 +2,7 @@ variable "project_name" {
     default = "roboshop"
 }
 
-variable "environment" {
+variable "environment"{
     default = "dev"
 }
 
@@ -13,8 +13,14 @@ variable "vpc_cidr" {
 variable "common_tags" {
     default = {
         Project = "roboshop"
-        Terraform = "true"
         Environment = "dev"
+        Terraform = "true"
+    }
+}
+
+variable "vpc_tags" {
+    default = {
+        Purpose = "assignment"
     }
 }
 
@@ -28,8 +34,4 @@ variable "private_subnet_cidrs" {
 
 variable "database_subnet_cidrs" {
     default = ["10.0.21.0/24", "10.0.22.0/24"]
-}
-
-variable "is_peering_required" {
-    default = true
 }

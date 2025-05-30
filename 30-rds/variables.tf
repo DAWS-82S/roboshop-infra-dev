@@ -8,18 +8,16 @@ variable "environment" {
 
 variable "common_tags" {
     default = {
-        Project = "roboshop"
-        Terraform = "true"
+        Project = "expense"
         Environment = "dev"
+        Terraform = "true"
     }
 }
 
-variable "rds_tags" {
-    default = {
-        Component = "mysql"
-    }
+variable "zone_id" {
+    default = "Z021448929NMXW4P65UQE"
 }
 
-variable "zone_name" {
-    default = "daws81s.online"
+variable "domain_name" {
+    default = "daws82s.online"
 }
